@@ -38,16 +38,26 @@ export default function Home() {
                 Datta <br className="hidden md:block"/> Dhanasure<span className="text-primary">.</span>
               </h1>
               <h2 className="text-2xl md:text-3xl text-muted-foreground font-medium mb-8 max-w-2xl leading-relaxed">
-                Software Engineer building robust, scalable, and high-performance digital experiences.
+  Java Backend Developer | Spring Boot | Microservices | SQL Server
               </h2>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="rounded-full px-8 h-14 text-base font-semibold group" onClick={scrollToContact}>
                   Contact Me
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button size="lg" variant="outline" className="rounded-full px-8 h-14 text-base font-semibold bg-background hover:bg-muted">
-                  View Resume
-                </Button>
+             <a
+  href="/Datta Dhanasure.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    size="lg"
+    variant="outline"
+    className="rounded-full px-8 h-14 text-base font-semibold bg-background hover:bg-muted"
+  >
+    View Resume
+  </Button>
+</a>
               </div>
             </div>
           </div>
@@ -63,13 +73,13 @@ export default function Home() {
               </div>
               <div className="md:col-span-8 text-lg text-muted-foreground space-y-6 leading-relaxed">
                 <p>
-                  I'm a Software Engineer with a deep passion for building robust backend architectures and seamless frontend experiences. I believe that great software is built at the intersection of technical excellence and user empathy.
+  I am a Software Engineer with 3.10+ years of experience in Java, Spring Boot, Microservices and SQL Server.
                 </p>
                 <p>
-                  Over the past few years, I've had the opportunity to work across the stack, taking products from zero to one and scaling existing systems to handle millions of requests. I obsess over clean code, performant database queries, and intuitive API design.
+  I have experience building REST APIs, enterprise applications and backend services while following clean coding practices.
                 </p>
                 <p>
-                  When I'm not in my code editor, I'm usually reading up on distributed systems, contributing to open-source projects, or optimizing my personal dotfiles.
+  I am passionate about learning new technologies and building scalable software solutions.
                 </p>
               </div>
             </div>
@@ -94,14 +104,19 @@ export default function Home() {
                 {
                   title: "Backend & APIs",
                   icon: <Server className="h-6 w-6 mb-4 text-primary" />,
-                  skills: ["Node.js", "Express", "Python", "Django", "GraphQL", "RESTful APIs"]
+ skills: ["Java", "Spring Boot", "Microservices", "REST APIs"]
                 },
                 {
-                  title: "Infrastructure & Tools",
-                  icon: <Database className="h-6 w-6 mb-4 text-primary" />,
-                  skills: ["PostgreSQL", "MongoDB", "Redis", "Docker", "AWS", "Git/GitHub Actions"]
-                }
-              ].map((category, i) => (
+ title: "Database",
+ icon: <Database className="h-6 w-6 mb-4 text-primary" />,
+ skills: ["SQL Server", "MySQL", "MongoDB", "Database Design"]
+},
+{
+ title: "Tools & Technologies",
+ icon: <Code2 className="h-6 w-6 mb-4 text-primary" />,
+ skills: ["Git", "GitHub", "Maven", "Postman", "Docker"]
+              }
+                          ].map((category, i) => (
                 <StaggerItem key={i} className="p-8 rounded-2xl bg-card border border-border/50 shadow-sm hover:shadow-md transition-shadow">
                   {category.icon}
                   <h5 className="text-xl font-bold mb-4">{category.title}</h5>
@@ -129,27 +144,47 @@ export default function Home() {
 
             <div className="space-y-24">
               {[
-                {
-                  title: "Nexus Analytics Platform",
-                  desc: "A real-time data visualization dashboard for enterprise SaaS metrics. Built custom aggregation pipelines that reduced query latency by 40%. Implemented complex interactive charts handling thousands of data points smoothly.",
-                  tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis"],
-                  link: "#",
-                  github: "#"
-                },
-                {
-                  title: "Distributed Task Queue",
-                  desc: "An open-source, lightweight distributed task queue built on Redis. Designed for high throughput and reliability with features like automatic retries, dead-letter queues, and graceful shutdown.",
-                  tags: ["Python", "Redis", "Docker", "pytest"],
-                  link: "#",
-                  github: "#"
-                },
-                {
-                  title: "Echo - Collaborative Workspace",
-                  desc: "A real-time collaborative document editor featuring live cursors, presence indicators, and conflict resolution via CRDTs. Scaled websocket connections using a custom pub/sub architecture.",
-                  tags: ["Next.js", "WebSockets", "Express", "MongoDB", "Tailwind"],
-                  link: "#",
-                  github: "#"
-                }
+{
+ title: "Insurance Workflow Application",
+ description:
+ "Developed workflow processes, task routing, business rules, notifications and approval systems using Case360 and Spring Boot Microservices.",
+ technologies: [
+   "Java",
+   "Spring Boot",
+   "Microservices",
+   "SQL Server",
+   "Case360"
+ ]
+}
+{
+ title: "PDFA Document Conversion Service",
+ description:
+ "Built Spring Boot based document conversion service for automatic PDFA conversion and secure document repository storage.",
+ technologies: [
+   "Java",
+   "Spring Boot",
+   "REST API"
+ ]
+}{
+ title: "Health Insurance System",
+ description:
+ "Developed healthcare insurance modules, REST APIs, Spring Data JPA integration and secure data flow across multiple applications.",
+ technologies: [
+   "Java",
+   "Spring Boot",
+   "JPA",
+   "MySQL",
+   "REST API"
+ ]
+}
+{
+ title: "Portfolio Website",
+ desc: "Designed and developed a personal portfolio website using React, TypeScript and Tailwind CSS.",
+ tags: ["React", "TypeScript", "Tailwind"],
+ link: "#",
+ github: "#"
+}
+
               ].map((project, i) => (
                 <div key={i} className="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                   <div className="lg:col-span-7 order-2 lg:order-1 relative h-64 md:h-[400px] bg-secondary-border/20 rounded-2xl overflow-hidden border border-secondary-border/50 flex items-center justify-center">
@@ -193,26 +228,27 @@ export default function Home() {
 
             <div className="space-y-12">
               {[
-                {
-                  role: "Senior Software Engineer",
-                  company: "Acme Corp",
-                  date: "2021 — Present",
-                  points: [
-                    "Spearheaded the migration of a monolithic legacy application into scalable microservices, improving deployment speed by 3x.",
-                    "Designed and implemented RESTful APIs handling over 5M+ daily requests with 99.99% uptime.",
-                    "Mentored junior engineers and established team-wide code review standards and CI/CD pipelines."
-                  ]
-                },
-                {
-                  role: "Software Engineer",
-                  company: "TechFlow Solutions",
-                  date: "2018 — 2021",
-                  points: [
-                    "Developed and shipped 15+ complex React applications with extensive state management and interactive visualizations.",
-                    "Optimized database indexing and queries, reducing average API response times from 800ms to 150ms.",
-                    "Collaborated closely with product managers and designers to iterate on core user workflows."
-                  ]
-                }
+               {
+ role: "Software Engineer",
+ company: "Capgemini Technology Services India Limited",
+ period: "Dec 2023 - Present",
+ description: [
+   "Developing Insurance Workflow Applications using Spring Boot and Microservices.",
+   "Building REST APIs and backend services.",
+   "Working with SQL Server, Case360 and enterprise integrations.",
+   "Participating in Agile development and production support."
+ ]
+},
+{
+ role: "Software Engineer",
+ company: "Qualitas Global Services",
+ period: "Aug 2019 - Dec 2020",
+ description: [
+   "Developed enterprise applications using Java and Spring technologies.",
+   "Worked on backend services and database integration.",
+   "Collaborated with cross-functional teams to deliver business solutions."
+ ]
+}
               ].map((job, i) => (
                 <div key={i} className="relative pl-8 md:pl-0">
                   <div className="md:grid md:grid-cols-4 gap-8">
@@ -242,12 +278,50 @@ export default function Home() {
         <AnimatedSection className="py-24 px-6 bg-muted/30 border-y border-border/40">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-sm font-mono text-primary uppercase tracking-widest mb-6">Education</h3>
-            <h5 className="text-2xl font-bold mb-2">Bachelor of Science in Computer Science</h5>
-            <p className="text-lg text-muted-foreground mb-1">University of Technology</p>
-            <p className="font-mono text-sm text-muted-foreground">Class of 2018</p>
+            <h5 className="text-2xl font-bold mb-2">Bachelor of Engineering (Mechanical Engineering)</h5>
+            <p className="text-lg text-muted-foreground mb-1">Bharati Vidyapeeth College of Engineering, Kolhapur</p>
+            <p className="font-mono text-sm text-muted-foreground">Class of 2019</p>
           </div>
         </AnimatedSection>
+        {/* Awards Section */}
+<section id="awards" className="py-20">
+  <div className="container mx-auto px-4">
+    <h2 className="text-4xl font-bold mb-10">Awards & Recognition</h2>
 
+    <div className="space-y-6">
+      <div className="border rounded-lg p-6">
+        <h3 className="text-xl font-semibold">
+          Rising Star Award
+        </h3>
+        <p>Capgemini - March 2024</p>
+      </div>
+
+      <div className="border rounded-lg p-6">
+        <h3 className="text-xl font-semibold">
+          GEM (Going the Extra Mile) Award
+        </h3>
+        <p>Capgemini - 2024-2025</p>
+      </div>
+    </div>
+  </div>
+</section>``
+<div className="space-y-4">
+  <p>
+    📧 dattadhanasure22@gmail.com
+  </p>
+
+  <p>
+    📞 9503407984
+  </p>
+
+  <p>
+    📍 Hyderabad, India
+  </p>
+
+  <p>
+    💼 Java Full Stack Developer
+  </p>
+</div>
         {/* CONTACT SECTION */}
         <AnimatedSection id="contact" className="py-32 px-6">
           <div className="max-w-4xl mx-auto text-center">
@@ -261,15 +335,15 @@ export default function Home() {
             </Button>
 
             <div className="mt-24 flex justify-center gap-8">
-              <a href="#" className="p-4 rounded-full bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="https://github.com/dattadhanasure21?tab=repositories" className="p-4 rounded-full bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Github className="w-6 h-6" />
                 <span className="sr-only">GitHub</span>
               </a>
-              <a href="#" className="p-4 rounded-full bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="https://www.linkedin.com/in/datta-dhanasure-011763233/" className="p-4 rounded-full bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Linkedin className="w-6 h-6" />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="mailto:hello@example.com" className="p-4 rounded-full bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="dattadhanasure22@gmail.com" className="p-4 rounded-full bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Mail className="w-6 h-6" />
                 <span className="sr-only">Email</span>
               </a>
