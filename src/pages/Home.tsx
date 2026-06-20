@@ -157,7 +157,7 @@ export default function Home() {
       </h4>
     </div>
 
-    {/* Project Cards Here */}
+   //{/* Project Cards Here */}
     <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
   {[
     {
@@ -205,9 +205,9 @@ export default function Home() {
         ))}
       </div>
 
-      {(project.github || project.link) && (
+      {(project.link) && (
         <div className="flex gap-3">
-          {project.github && (
+          {/* {project.github && (
             <a
               href={project.github}
               target="_blank"
@@ -218,7 +218,7 @@ export default function Home() {
                 Code
               </Button>
             </a>
-          )}
+          )} */}
 
           {project.link && (
             <a
